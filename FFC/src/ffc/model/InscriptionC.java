@@ -4,9 +4,11 @@
  */
 package ffc.model;
 
+import java.util.ArrayList;
+
 /**
  *
- * @author sunweichen
+ * @author Geneviève
  */
 public class InscriptionC {
     //Constructeur de la classe "InscriptionC"
@@ -14,13 +16,15 @@ public class InscriptionC {
     private String etatInscriptionC;
     private String dateInscription;
     private String etatCoureur;
+    private ArrayList<Coureur> listeCoureur;
     
     //Construteur de la classe "InscriptionC"
-    public InscriptionC(int numIncriptionC,String etatInscriptionC,String dateInscription,String etatCoureur){
-        this.dateInscription=dateInscription;
+    public InscriptionC(int numIncriptionC, String etatInscriptionC, String dateInscription, String etatCoureur){
         this.numIncriptionC=numIncriptionC;
-        this.etatCoureur=etatCoureur;
         this.etatInscriptionC=etatInscriptionC;
+        this.dateInscription=dateInscription;
+        this.etatCoureur=etatCoureur;
+        this.listeCoureur= new ArrayList<>();
     }
     
     //Génération des getteurs et des setteurs
@@ -72,24 +76,17 @@ public class InscriptionC {
         
     }
     
+    //Obtenir un coureur dont l'inscription est validée
     public Coureur obtrenirCoureur(){
         
         return null;
     }
     
-    public void ajouterCoureur(){
-        
+    public void ajouterCoureur(Coureur coureur){
+        listeCoureur.add(coureur);
     }
     
-    public void supprimerInscriptionCoureur(){
-        
-    }
-    
-    public void modifEtatInscriptionC(){
-        
-    }
-    
-    public void modifEtatCoureur(){
-        
+    public void supprimerInscriptionCoureur(Coureur coureur){
+        listeCoureur.remove(coureur);
     }
 }
