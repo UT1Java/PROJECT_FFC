@@ -14,14 +14,16 @@ public class Coureur {
     //Attribut de la classe "Coureur"
     private int codeCoureur ;
     private String nomC;
+    private String prenomC;
     private String dateNaissance;
     private String rhesus;
     private String groupSang ;
 	
     //Constructeur de la classe
-    public Coureur(int codeCoureur, String nomC, String dateNaissance, String rhesus, String groupSang){
+    public Coureur(int codeCoureur, String nomC, String prenomC, String dateNaissance, String rhesus, String groupSang){
         this.codeCoureur= codeCoureur;
         this.nomC=nomC;
+        this.prenomC = prenomC;
         this.dateNaissance=dateNaissance;
         this.groupSang=groupSang;
         this.rhesus=rhesus;
@@ -78,19 +80,11 @@ public class Coureur {
         this.groupSang = groupSang;
     }
     
-    //Méthodes de classe "Coureur"
-    public void modifInformationCoureur(){
-        
+    //Méthodes de classe "Coureur"    
+    public void afficherTousInfosCoureur(){
+        System.out.println(codeCoureur + " " + nomC+ " " + prenomC + " " + dateNaissance + " " + rhesus + " " + groupSang);
     }
-    
-    public void afficherTout(){
-        
-    }
-    
-    public void getListInscriptionCoureur(){
-        
-    }
-    
+      
     //Instanciation de Hashtable avec le "Equals"
     @Override
 	public boolean equals(Object o) {
