@@ -15,8 +15,10 @@ public class Conducteur {
     private String prenomConducteur;
     
     //Constructeur de la classe "Conducteur"
-    public Conducteur(){
-        
+    public Conducteur(int numConducteur,String nomConducteur,String prenomConducteur){
+        this.nomConducteur=nomConducteur;
+        this.numConducteur=numConducteur;
+        this.prenomConducteur=prenomConducteur;
     }
     
     //Génération des getteurs et setteurs
