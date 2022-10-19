@@ -16,8 +16,11 @@ public class InscriptionC {
     private String etatCoureur;
     
     //Construteur de la classe "InscriptionC"
-    public InscriptionC(){
-        
+    public InscriptionC(int numIncriptionC,String etatInscriptionC,String dateInscription,String etatCoureur){
+        this.dateInscription=dateInscription;
+        this.numIncriptionC=numIncriptionC;
+        this.etatCoureur=etatCoureur;
+        this.etatInscriptionC=etatInscriptionC;
     }
     
     //Génération des getteurs et des setteurs
