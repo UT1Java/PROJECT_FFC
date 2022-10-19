@@ -9,5 +9,76 @@ package ffc.model;
  * @author sunweichen
  */
 public class InscriptionE {
+    private int numInscriptionE;
+    private String etatInscriptionE;
+    private String dateInscriptionE;
+    private String etatEquipe;
     
+    //Constructeur de la classe "InscriptionE"
+    public InscriptionE(int numInscriptionE, String etatInscriptionE, String dateInscriptionE, String etatEquipe){
+        this.numInscriptionE=numInscriptionE;
+        this.etatInscriptionE=etatInscriptionE;
+        this.dateInscriptionE=dateInscriptionE;
+        this.etatEquipe=etatEquipe;
+    }
+    /**
+     * @return the numInscriptionE
+     */
+    public int getNumInscriptionE() {
+        return numInscriptionE;
+    }
+
+    /**
+     * @return the etatInscriptionE
+     */
+    public String getEtatInscriptionE() {
+        return etatInscriptionE;
+    }
+
+    /**
+     * @return the dateInscriptionE
+     */
+    public String getDateInscriptionE() {
+        return dateInscriptionE;
+    }
+
+    /**
+     * @return the etatEquipe
+     */
+    public String getEtatEquipe() {
+        return etatEquipe;
+    }
+
+    /**
+     * @param etatEquipe the etatEquipe to set
+     */
+    public void setEtatEquipe(String etatEquipe) {
+        this.etatEquipe = etatEquipe;
+    }
+    
+    //Méthodes de la classe "InscriptionE"
+    public void ajouterEquipe(){
+       
+    }
+    
+    public void supprimerEquipe(){
+        
+    }
+    
+    public void modifEtatEquipe(){
+        
+    }
+    
+    public InscriptionC obtenirListeCoureurs(){
+        
+        return null;  
+    }
+    
+    public void afficherListeCoureurs(){
+        
+    }
+    
+    public void afficherListeVehiculesAssistances(){
+        
+    }
 }
