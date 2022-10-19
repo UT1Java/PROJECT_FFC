@@ -6,7 +6,7 @@ package ffc.model;
 
 /**
  *
- * @author Geevieve
+ * @author Genevieve
  */
 public class Conducteur {
     //Attributs de la classe "Conducteur"
