@@ -4,7 +4,9 @@
  */
 package ffc.model;
 
+import java.util.ArrayList;
 import java.util.Objects;
+import java.lang.Exception;
 
 /**
  *
@@ -14,24 +16,26 @@ public class Equipe {
     //Attribut de la classe "Equipe"
     private int codeEquipe;
     private String nomEquipe;
+    private String nationaliteE;
     private String nomCorrespondant;
     private String telCorrespondant;
     private String emailCorrespondant;
+    private ArrayList<Coureur> listeCoureurs; //Création liste des coureurs
+    private ArrayList<VehiculesAssistances> listeVehicules; //Création d'une liste des véhicules
     
     //contructeur de la classe "Equipe
-    public Equipe(int codeEquipe, String nomEquipe, String nomCorrespondant, String telCorrespondant, String emailCorrespondant){
+    public Equipe(int codeEquipe, String nomEquipe, String nationaliteE, String nomCorrespondant, String telCorrespondant, String emailCorrespondant){
         this.codeEquipe=codeEquipe;
         this.nomEquipe=nomEquipe;
+        this.nationaliteE=nationaliteE;
         this.nomCorrespondant=nomCorrespondant;
         this.telCorrespondant=telCorrespondant;
         this.emailCorrespondant=emailCorrespondant;
-    }
-
-    Equipe() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.listeCoureurs= new ArrayList<>();
+        this.listeVehicules= new ArrayList<>();
     }
     
-    ////Génération des getteurs et setteurs de la classe "Equipe"
+    //Génération des getteurs et setteurs de la classe "Equipe"
     /**
      * @return the codeEquipe
      */
@@ -68,15 +72,31 @@ public class Equipe {
     }
     
     //Méthodes de classe "Equipe"
-    
-    public void AfficherTout(){
-        
+    public void ajouterCoureurs(Coureur coureur) throws Exception{
+         if(this.listeCoureurs.size()>=10){ 
+             throw new Exception();
+        }
+         listeCoureurs.add(coureur);
     }
     
-    public void modifInfoEquipe(){
-        
+    public void ajouterVehiculesAssistances(VehiculesAssistances vehicule){
+        listeVehicules.add(vehicule);
     }
     
+    public void supprimerVehicule(VehiculesAssistances vehicule){
+        listeVehicules.remove(vehicule);
+    }
+    
+    public void obtenirTousLesCoureurs(){
+        for(int i = 0; i<listeCoureurs.size(); i++){
+         System.out.println(listeCoureurs.get(i).getNomC());   
+        }
+    }
+    
+    public void AfficherToutesInfosEquipe(){
+       System.out.println(codeEquipe + " " + nomEquipe+ " " + nomCorrespondant + " " + telCorrespondant + " " + emailCorrespondant); 
+    }
+       
     //Instanciation de Hashtable avec le "Equals"
     @Override
 	public boolean equals(Object o) {
