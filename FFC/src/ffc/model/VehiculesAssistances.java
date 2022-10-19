@@ -4,6 +4,8 @@
  */
 package ffc.model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Geneviève
@@ -13,10 +15,14 @@ public class VehiculesAssistances {
     private int numImmatriculation;
     private String marque;
     private String typeV;
+    private ArrayList<Conducteur> listeConducteurs;
     
     //Constructeur de la classe "VehiculesAssistances"
-    public VehiculesAssistances(){
-        
+    public VehiculesAssistances(int numImmatriculation, String marque, String typeV){
+        this.numImmatriculation=numImmatriculation;
+        this.marque=marque;
+        this.typeV=typeV;
+        this.listeConducteurs=new ArrayList<>();
     }
     
     //Génération des getteurs et des setteurs
@@ -41,16 +47,16 @@ public class VehiculesAssistances {
         return typeV;
     }
     
-    //Méthodes de la classe "VehiculesAssistances"
-    public void ajouterVehicule(){
-        
+    //Méthodes de la classe "VehiculesAssistances
+    public void AfficherListeVehicules(){
+        System.out.println(numImmatriculation + " " + marque + " " + typeV + " " + listeConducteurs);
     }
     
-    public void supprimerVehicule(){
-        
+    public void ajouterConducteur(Conducteur conducteur){
+        listeConducteurs.add(conducteur);
     }
     
-    public void modifierVehicule(){
-        
+    public void supprimerConducteur(Conducteur conducteur){
+        listeConducteurs.remove(conducteur);
     }
 }
