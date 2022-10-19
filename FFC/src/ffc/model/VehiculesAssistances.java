@@ -48,8 +48,12 @@ public class VehiculesAssistances {
     }
     
     //Méthodes de la classe "VehiculesAssistances
+    /*Afficher les informations de tous les véhicules affectés    
+    */
     public void AfficherListeVehicules(){
-        System.out.println(numImmatriculation + " " + marque + " " + typeV + " " + listeConducteurs);
+        for(int i = 0; i<listeConducteurs.size(); i++){
+            System.out.println(numImmatriculation + " " + marque + " " + typeV + " " + listeConducteurs.get(i).getNomConducteur());
+        }
     }
     
     public void ajouterConducteur(Conducteur conducteur){
