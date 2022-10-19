@@ -4,15 +4,18 @@
  */
 package ffc.model;
 
+import java.util.ArrayList;
+
 /**
  *
- * @author sunweichen
+ * @author Geneviève
  */
 public class InscriptionE {
     private int numInscriptionE;
     private String etatInscriptionE;
     private String dateInscriptionE;
     private String etatEquipe;
+    private ArrayList<Equipe> listeEquipes; //Création d'une liste d'équipes
     
     //Constructeur de la classe "InscriptionE"
     public InscriptionE(int numInscriptionE, String etatInscriptionE, String dateInscriptionE, String etatEquipe){
@@ -20,6 +23,7 @@ public class InscriptionE {
         this.etatInscriptionE=etatInscriptionE;
         this.dateInscriptionE=dateInscriptionE;
         this.etatEquipe=etatEquipe;
+        this.listeEquipes= new ArrayList<>();
     }
     /**
      * @return the numInscriptionE
@@ -57,28 +61,29 @@ public class InscriptionE {
     }
     
     //Méthodes de la classe "InscriptionE"
-    public void ajouterEquipe(){
-       
+    public void ajouterEquipe(Equipe equipe){
+        listeEquipes.add(equipe);
     }
     
-    public void supprimerEquipe(){
-        
+    public void supprimerEquipe(Equipe equipe){
+        listeEquipes.remove(equipe);
     }
     
-    public void modifEtatEquipe(){
-        
-    }
-    
+    /*Cette méthode permets de récupérer tous les coureurs inscrits (ceux qui sont créés)
+    de n'importe quelle équipes
+    */
     public InscriptionC obtenirListeCoureurs(){
         
         return null;  
     }
     
+    //Afficher la liste de coureurs inscrit dans une équipe
     public void afficherListeCoureurs(){
         
     }
     
+    //Afficher tous les véhicules affactés pour toutes les différentes équipes
     public void afficherListeVehiculesAssistances(){
-        
+        System.out.println();
     }
 }
