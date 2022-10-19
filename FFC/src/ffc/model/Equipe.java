@@ -93,8 +93,14 @@ public class Equipe {
         }
     }
     
+    //Afficher toutes les informations d'une équipe constitué de coureurs aavec des véhicules affectés
     public void AfficherToutesInfosEquipe(){
-       System.out.println(codeEquipe + " " + nomEquipe+ " " + nomCorrespondant + " " + telCorrespondant + " " + emailCorrespondant); 
+        for(int i = 0; i<listeCoureurs.size(); i++){
+            for(int j = 0; i<listeVehicules.size(); i++){
+                 System.out.println(codeEquipe + " " + nomEquipe+ " " + nomCorrespondant + " " + telCorrespondant
+                    + " " + emailCorrespondant + " " + listeCoureurs.get(i).getNomC()+ " " + listeVehicules.get(j).getMarque());
+            }
+        } 
     }
        
     //Instanciation de Hashtable avec le "Equals"
