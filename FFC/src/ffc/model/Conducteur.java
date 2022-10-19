@@ -15,10 +15,8 @@ public class Conducteur {
     private String prenomConducteur;
     
     //Constructeur de la classe "Conducteur"
-    public Conducteur(int numConducteur,String nomConducteur,String prenomConducteur){
-        this.nomConducteur=nomConducteur;
-        this.numConducteur=numConducteur;
-        this.prenomConducteur=prenomConducteur;
+    public Conducteur(){
+        
     }
     
     //Génération des getteurs et setteurs
@@ -43,15 +41,8 @@ public class Conducteur {
         return prenomConducteur;
     }
     
-    public void ajouterConducteur(){
-        
-    }
-    
-    public void modifierConducteur(){
-        
-    }
-    
-    public void supprimerConducteur(){
-        
+    //Méthodes de la classe Conducteur
+    public void afficherTousLesConducteurs(){
+        System.out.println(numConducteur + " " + nomConducteur + " " + prenomConducteur);
     }
 }
