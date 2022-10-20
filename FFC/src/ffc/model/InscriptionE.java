@@ -15,7 +15,6 @@ public class InscriptionE {
     private String etatInscriptionE;
     private String dateInscriptionE;
     private String etatEquipe;
-    private ArrayList<Equipe> listeEquipes; //Création d'une liste d'équipes
     
     //Constructeur de la classe "InscriptionE"
     public InscriptionE(int numInscriptionE, String etatInscriptionE, String dateInscriptionE, String etatEquipe){
@@ -23,7 +22,6 @@ public class InscriptionE {
         this.etatInscriptionE=etatInscriptionE;
         this.dateInscriptionE=dateInscriptionE;
         this.etatEquipe=etatEquipe;
-        this.listeEquipes= new ArrayList<>();
     }
     /**
      * @return the numInscriptionE
@@ -60,30 +58,4 @@ public class InscriptionE {
         this.etatEquipe = etatEquipe;
     }
     
-    //Méthodes de la classe "InscriptionE"
-    public void ajouterEquipe(Equipe equipe){
-        listeEquipes.add(equipe);
-    }
-    
-    public void supprimerEquipe(Equipe equipe){
-        listeEquipes.remove(equipe);
-    }
-    
-    /*Cette méthode permets de récupérer tous les coureurs inscrits (ceux qui sont créés)
-    de n'importe quelle équipes
-    */
-    public InscriptionC obtenirListeCoureurs(){
-        
-        return null;  
-    }
-    
-    //Afficher la liste de coureurs inscrit dans une équipe
-    public void afficherListeCoureurs(){
-        
-    }
-    
-    //Afficher tous les véhicules affactés pour toutes les différentes équipes
-    public void afficherListeVehiculesAssistances(){
-        System.out.println();
-    }
 }
