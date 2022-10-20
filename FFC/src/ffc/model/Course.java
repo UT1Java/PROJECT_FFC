@@ -10,7 +10,7 @@ import java.util.ArrayList;
  *
  * @author sunweichen
  */
-public abstract class Course {
+public class Course {
     public String nomCourse;
     public int nbEdition;
     public ArrayList<Edition>editions=new ArrayList<>();
@@ -31,8 +31,8 @@ public abstract class Course {
         }
     }
     
-    public void afficherNom(){
-        System.out.println(nomCourse);
+    public String getNom(){
+       return nomCourse;
     }
     
     public void afficherTout(){
@@ -40,8 +40,6 @@ public abstract class Course {
             editions.get(i).afficherTout();
         }
     }
-    
-    public abstract float getDistance();
     
     
     
