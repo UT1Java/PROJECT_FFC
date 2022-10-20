@@ -21,7 +21,7 @@ public class Equipe {
     private String telCorrespondant;
     private String emailCorrespondant;
     private ArrayList<Coureur> listeCoureurs; //Création liste des coureurs
-    private ArrayList<VehiculesAssistances> listeVehicules; //Création d'une liste des véhicules
+    private ArrayList<Vehicule> listeVehicules; //Création d'une liste des véhicules
     
     //contructeur de la classe "Equipe
     public Equipe(int codeEquipe, String nomEquipe, String nationaliteE, String nomCorrespondant, String telCorrespondant, String emailCorrespondant){
@@ -72,18 +72,16 @@ public class Equipe {
     }
     
     //Méthodes de classe "Equipe"
-    public void ajouterCoureurs(Coureur coureur) throws Exception{
-         if(this.listeCoureurs.size()>=10){ 
-             throw new Exception();
-        }
+    public void ajouterCoureurs(Coureur coureur) {
+
          listeCoureurs.add(coureur);
     }
     
-    public void ajouterVehiculesAssistances(VehiculesAssistances vehicule){
+    public void ajouterVehiculesAssistances(Vehicule vehicule){
         listeVehicules.add(vehicule);
     }
     
-    public void supprimerVehicule(VehiculesAssistances vehicule){
+    public void supprimerVehicule(Vehicule vehicule){
         listeVehicules.remove(vehicule);
     }
     
@@ -93,7 +91,6 @@ public class Equipe {
         }
     }
     
-    //Afficher toutes les informations d'une équipe constitué de coureurs aavec des véhicules affectés
     public void AfficherToutesInfosEquipe(){
         for(int i = 0; i<listeCoureurs.size(); i++){
             for(int j = 0; i<listeVehicules.size(); i++){
@@ -103,7 +100,7 @@ public class Equipe {
         } 
     }
        
-    //Instanciation de Hashtable avec le "Equals"
+
     @Override
 	public boolean equals(Object o) {
 		if(o instanceof Equipe e) {
