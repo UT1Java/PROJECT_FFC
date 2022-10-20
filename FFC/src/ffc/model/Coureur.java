@@ -14,78 +14,47 @@ public class Coureur {
     //Attribut de la classe "Coureur"
     private int codeCoureur ;
     private String nomC;
-    private String prenomC;
     private String dateNaissance;
     private String rhesus;
     private String groupSang ;
 	
     //Constructeur de la classe
-    public Coureur(int codeCoureur, String nomC, String prenomC, String dateNaissance, String rhesus, String groupSang){
+    public Coureur(int codeCoureur, String nomC, String dateNaissance, String rhesus, String groupSang){
         this.codeCoureur= codeCoureur;
         this.nomC=nomC;
-        this.prenomC = prenomC;
         this.dateNaissance=dateNaissance;
         this.groupSang=groupSang;
         this.rhesus=rhesus;
     }
-    
-    //Génération des getteurs et setteurs de la classe "Coureur"
 
-    /**
-     * @return the codeCoureur
-     */
     public int getCodeCoureur() {
         return codeCoureur;
     }
 
-    /**
-     * @return the nomC
-     */
     public String getNomC() {
         return nomC;
     }
 
-    /**
-     * @return the dateNaissanceString
-     */
     public String getDateNaissanceString() {
         return dateNaissance;
     }
 
-    /**
-     * @return the rhesus
-     */
     public String getRhesus() {
         return rhesus;
     }
 
-    /**
-     * @param rhesus the rhesus to set
-     */
     public void setRhesus(String rhesus) {
         this.rhesus = rhesus;
     }
 
-    /**
-     * @return the groupSang
-     */
     public String getGroupSang() {
         return groupSang;
     }
 
-    /**
-     * @param groupSang the groupSang to set
-     */
     public void setGroupSang(String groupSang) {
         this.groupSang = groupSang;
     }
-    
-    //Méthodes de classe "Coureur"    
-    public void afficherTousInfosCoureur(){
-        System.out.println(codeCoureur + " " + nomC+ " " + prenomC + " " + dateNaissance + " " + rhesus + " " + groupSang);
-    }
-      
-    //Instanciation de Hashtable avec le "Equals"
+
     @Override
 	public boolean equals(Object o) {
 		if(o instanceof Coureur c) {
